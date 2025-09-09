@@ -1,4 +1,8 @@
 {
+  "buildCommand": "chmod +x build.sh && ./build.sh || npm run build",
+  "framework": "create-react-app",
+  "installCommand": "npm install",
+  "outputDirectory": "build",
   "rewrites": [
     {
       "source": "/(.*)",

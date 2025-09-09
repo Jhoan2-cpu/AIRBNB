@@ -1,0 +1,124 @@
+.search-container {
+  background: #f7f7f7;
+  padding: 32px 0;
+}
+
+.search-bar {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  gap: 1px;
+}
+
+.search-section {
+  flex: 1;
+  padding: 16px 24px;
+  border-radius: 24px;
+  transition: background-color 0.2s;
+  cursor: pointer;
+}
+
+.search-section:hover {
+  background-color: #f7f7f7;
+}
+
+.search-section label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.search-section input,
+.search-section select {
+  width: 100%;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  color: #717171;
+  padding: 0;
+}
+
+.search-section input:focus,
+.search-section select:focus {
+  outline: none;
+  box-shadow: none;
+  border: none;
+}
+
+.search-btn {
+  background: linear-gradient(135deg, #e61e4d, #d70466);
+  color: white;
+  border-radius: 24px;
+  padding: 16px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: 8px;
+  transition: transform 0.2s;
+}
+
+.search-btn:hover {
+  transform: scale(1.05);
+}
+
+.search-btn.searching {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.search-btn.searching:hover {
+  transform: none;
+}
+
+.loading-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top: 2px solid white;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+  .search-container {
+    padding: 16px;
+  }
+  
+  .search-bar {
+    flex-direction: column;
+    border-radius: 16px;
+    padding: 16px;
+  }
+  
+  .search-section {
+    width: 100%;
+    padding: 12px 0;
+    border-bottom: 1px solid #ebebeb;
+  }
+  
+  .search-section:last-of-type {
+    border-bottom: none;
+  }
+  
+  .search-btn {
+    width: 100%;
+    justify-content: center;
+    margin: 16px 0 0 0;
+  }
+}
